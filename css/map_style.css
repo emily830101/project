@@ -110,12 +110,12 @@ body{
 .map{
     width: 420px;
     height: 600px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     float: left;
 }
 
 .map_container{
-    border: 1px solid #999;
+    /* border: 1px solid #999; */
     width: 1000px;
     height: 800px;
     margin: 40px auto 0 auto;
@@ -205,4 +205,16 @@ body{
     position: absolute !important; 
     height: 700px !important;
     width: 400px !important;
+}
+
+#branch1:hover{
+    background-color: rgb(226, 223, 223);
+}
+
+#branch2:hover{
+    background-color: rgb(226, 223, 223);
+}
+
+#branch3:hover{
+    background-color: rgb(226, 223, 223);
 }
