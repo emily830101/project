@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="./plugin/jquery-ui-1.13.2/jquery-ui.css">
+    <link rel="stylesheet" href="./css/booking_style.css">
+    
+</head>
+<body>
+     
+    <!--nav bar -->
+    <nav class="navbar">
+        
+        <a href="index.html" class="logo">
+              <img src="./image/logo.svg" alt="">
+          </a>
+          <ul class="nav_links">
+              <li class="item"><a href="room.html">客房資訊</a></li>
+              <li class="item"><a href="restaurant.html">珍饌好食</a></li>
+              <li class="item"><a href="play.html">必玩體驗</a></li>
+              <li class="item"><a href="map.html">Los Geht's分館</a></li>
+              <li class="booking"><a href="booking.html">立即訂房</a></li>
+          </ul>
+  
+      </nav>
+
+    <!-- 大banner -->
+    <div class="banner">
+        <p>從Los Geht's向世界的角落出發!</p>
+    </div>
+
+    <div class="choose">
+        <div class="content">
+            <div class="date">
+                <label for="">選擇日期:</label>
+                <label for="from">從</label>
+                <input type="text" id="from" name="from" autocomplete="off">
+                <label for="to">到</label>
+                <input type="text" id="to" name="to" autocomplete="off">
+            </div>
+
+            <form class="number">
+                <label for="peolple">入住人數</label>
+                    <select id="people" style="font-size: 18px; width: 80px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+            </form>
+        </div>
+    </div>
+
+        <div class="result">
+            <ul id="result">
+            </ul>
+        </div>
+
+   
+
+    <script src="./plugin/jQuery3.6.0/jquery.js"></script>
+    <script src="./plugin/jquery-ui-1.13.2/jquery-ui.js"></script>
+    <script src="./js/database.js"></script>
+
+    <script>
+        // 日曆
+        $( function() {
+          // default date
+          let today = new Date();
+          let tomorrow = new Date();
+          tomorrow.setDate(today.getDate() + 1);
+          $("#from").val(today.toISOString().split('T')[0]);
+          $("#to").val(tomorrow.toISOString().split('T')[0]);
+
+          var dateFormat = "yy-mm-dd"; // 指定日期字串轉給js看的日期的格式
+
+          var from = $( "#from" )
+              .datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 2,
+                dateFormat: "yy-mm-dd",
+              })
+              .on( "change", function() { // 註冊開始日期change事件
+                to.datepicker( "option", "minDate", getDate( this ) ); // 讓to小於from的日期都不能選
+                reloadAllRooms();
+              });
+              
+          var to = $( "#to" ).datepicker({
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 2,
+              dateFormat: "yy-mm-dd"
+            })
+            .on( "change", function() { // 註冊結束日期change事件
+              from.datepicker( "option", "maxDate", getDate( this ) ); // 讓from大於to的日期都不能選
+              reloadAllRooms();
+            });
+       
+          function getDate( element ) {
+            var date;
+            try {
+              console.log(element.value); // 字串
+              date = $.datepicker.parseDate( dateFormat, element.value );
+              console.log(date); 
+            } catch( error ) {
+              console.log("格式錯誤");
+              date = null;
+            }
+            return date;
+          }
+        } );
+        
+
+        // 房間資訊
+        $(function() {
+            reloadAllRooms();
+            // 註冊入住人數change事件
+            let people = document.getElementById("people");
+            people.addEventListener("change", ()=>{
+                reloadAllRooms();
+            });
+        });
+
+        // reload所有房間資訊
+        function reloadAllRooms() {
+            cleanRooms(); // 清空
+            let searchPeople = parseInt(document.getElementById("people").value);
+            let fromDate = document.getElementById("from").value;
+            let toDate = document.getElementById("to").value;
+            for (let i = 0; i < rooms.length; i++) {
+                let room = rooms[i];
+                if (searchPeople <= room.capacity && !room.unavailableDates.includes(fromDate) && !room.unavailableDates.includes(toDate)) {
+                    addRoom(room);
+                }
+            }
+        }
+
+        function cleanRooms() {
+            document.getElementById("result").innerHTML = "";
+        }
+
+        function addRoom(room) {
+            console.log(room);
+            $("#result").append(
+                    `<li>
+                        <div class="notice">
+                            <img src="${room.img}" alt="">
+                            <h3>官網優惠價</h3>
+                            <p>不可退款<br>需付30%押金</p>
+                        </div>
+                        
+                        <div class="result_text">
+                            <h2>${room.name}</h2>
+                            <p>${room.description}</p>
+                            <div class="price">
+                                <h1>${room.price}</h1>
+                                <a href="confirm.html">選擇</a>
+                            </div>
+                        </div>
+                    </li>`
+            );
+        }
+    </script>
+
+
+</body>
+</html>

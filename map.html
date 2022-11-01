@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="./css/map_style.css">
+    <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <!--nav bar -->
+     <nav class="navbar">
+        
+        <a href="index.html" class="logo">
+              <img src="./image/logo.svg" alt="">
+          </a>
+          <ul class="nav_links">
+              <li class="item"><a href="room.html">客房資訊</a></li>
+              <li class="item"><a href="restaurant.html">珍饌好食</a></li>
+              <li class="item"><a href="play.html">必玩體驗</a></li>
+              <li class="item"><a href="map.html">Los Geht's分館</a></li>
+              <li class="booking"><a href="booking.html">立即訂房</a></li>
+          </ul>
+  
+      </nav>
+
+    <!-- 大banner -->
+    <div class="banner">
+        <p>Los Geht's擁有多家分館<br>無論您在世界的哪個角落<br>都能享受Los Geht's的頂級服務</p>
+    </div>
+
+    <div class="map_container">
+        
+        <div class="">
+            <div id="map"></div>
+        </div>
+
+        <div class="branch" id="branch1">
+            <img src="./image/branch1.png" alt="">
+            <div class="branch_text">
+                <h2>Los Geht's 濟南館</h2>
+                <h3>台北市中正區濟南路一段321號</h3>
+                <h3>02-33141234</h3>
+            </div>
+        </div>
+        <div class="branch" id="branch2">
+            <img src="./image/bramch2.png" alt="">
+            <div class="branch_text">
+                <h2>Los Geht's 濱江館</h2>
+                <h3>台北市中山區民族東路336號</h3>
+                <h3>02-22345678</h3>
+            </div>
+        </div>
+        <div class="branch" id="branch3">
+            <img src="./image/branch3.png" alt="">
+            <div class="branch_text">
+                <h2>Los Geht's 中正館</h2>
+                <h3>台北市中正區中山南路21號</h3>
+                <h3>02-66152085</h3>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <!--Footer-->
+    <footer>
+        <div class="footer">
+            <div class="footer_container">
+                <div class="footer_text">
+                    <p class="footer_info">台北市中山區南京東路三段219號<br>02-27120589<br>losgehts@gmail.com</p>
+                    <p class="footer_announce">本網站為緯育TibaMe前端工程師班第80期學員專題作品,本平台僅供學習展示之用<br>參考資源:https://tainan.lakeshore.com.tw/</p>
+                </div>
+                <ul class="footer_menu">
+                    <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 25.04, lng: 121.512},
+                zoom: 13
+            });
+            
+            // 濟南館
+            var marker1 = new google.maps.Marker({
+                position: {lat: 25.0417156, lng: 121.5256624}, // 定位
+                map: map,
+                title:'濟南館'
+            }); 
+            marker1.setMap(map);
+            // 註冊mouse enter, mouse leave事件
+            document.getElementById("branch1").addEventListener("mouseenter", () => {
+                toggleBounce(marker1);
+                console.log("Enter");
+            });
+            document.getElementById("branch1").addEventListener("mouseleave", () => {
+                toggleBounce(marker1);
+                console.log("Leave");
+            });
+
+            // 濱江館
+            var marker2 = new google.maps.Marker({
+                position: {lat: 25.06741, lng: 121.5371787},
+                map: map,
+                title:'濱江館'
+            });
+            marker2.setMap(map);
+            document.getElementById("branch2").addEventListener("mouseenter", () => {
+                toggleBounce(marker2);
+            });
+            document.getElementById("branch2").addEventListener("mouseleave", () => {
+                toggleBounce(marker2);
+            });
+
+            // 中正館
+            var marker3 = new google.maps.Marker({
+                position: {lat: 25.0345393, lng: 121.5192265},
+                map: map,
+                title:'中正館'
+            });
+            marker3.setMap(map);
+            document.getElementById("branch3").addEventListener("mouseenter", () => {
+                toggleBounce(marker3);
+            });
+            document.getElementById("branch3").addEventListener("mouseleave", () => {
+                toggleBounce(marker3);
+            });
+        }
+
+        function toggleBounce(marker) {
+            if (marker.getAnimation() != null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
+    </script>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_pWa8kGfXLWju54TBEsqs7hGFSMV9DAA&callback=initMap">
+          
+        </script>
+
+    
+</body>
+</html>

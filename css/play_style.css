@@ -1,0 +1,315 @@
+@import url("reset.css");
+body{
+    font-family:"Helvetica", "Arial","LiHei Pro","微軟正黑體", sans-serif;
+    /* word-spacing: 5px; */
+    letter-spacing: 2px;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+    
+.item {
+    flex-grow: 1;
+    padding: 20px;
+    border-bottom: 30px solid transparent;
+    transition: 0.3s;
+}
+
+.logo{
+    display: flex;
+    width: 100px;
+    /* height: 50px; */
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 400px;
+    color: white;
+    margin-top: 25px;
+}
+
+.item a{
+    text-decoration: none;
+    font-size: 20px;
+    color:#025255;
+}
+
+.item a:hover{
+    color:#F9C50F;
+}
+
+.item:nth-child(3) a {
+    border-bottom: 3px solid #025255;
+}
+
+.booking a{
+  appearance: none;
+  background-color: #F9C50F;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.booking a:disabled {
+  pointer-events: none;
+}
+
+.booking a:hover {
+  color: #fff;
+  background-color: #025255;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-5px);
+}
+
+.booking a:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.banner{
+    background-image: url(../image/Rectangle\ 58.png), url(../image/play_banner.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: contain, cover;
+    background-position: 0, center center;
+    padding-top: 26.6%;
+    padding-bottom: 2%;
+}
+
+.banner p{
+    color: white;
+    font-size: 24px;
+    line-height: 1.8;
+    margin-left: 40px;
+}
+
+.play_notice{
+    color:#025255;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.play_notice h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.play_notice p{
+   font-size: 20px;
+   margin-bottom: 50px;
+}
+
+.play_content{
+    position: relative;
+    width: 70%;
+    height: 1050px;
+    background-color: #025255;
+    margin-top: 30px;
+    margin: 0 auto;
+}
+
+.play_content img{
+    position: absolute;
+}
+
+.pic1{
+    left: 430px;
+    top: 49px;
+}
+
+.pic1:hover{
+    transform: scale(1.1);
+	transition: transform 1s ease;
+}
+
+.pic2{
+    left: 22px;
+    top: 220px;
+}
+
+.pic2:hover{
+    transform: scale(1.1);
+	transition: transform 1s ease;
+}
+
+.pic3{
+    left: 418px;
+    top: 493px;
+}
+
+.pic3:hover{
+    transform: scale(1.1);
+	transition: transform 1s ease;
+}
+.pic4{
+    left: 140px;
+    top: 791px;
+}
+
+.pic4:hover{
+    transform: scale(1.1);
+	transition: transform 1s ease;
+}
+
+.mountain1{
+    left: 650px;
+    top: 35px;
+}
+
+.mountain2{
+    left: 744px;
+    top: 64px;
+}
+
+.appletree{
+    left: 608px;
+    top: 350px;
+}
+
+.christmastree{
+    left: 528px;
+    top: 369px;
+}
+
+.darktree{
+    left: 693px;
+    top: 275px;
+}
+
+.circletree{
+    left: 781px;
+    top: 313px;
+}
+
+.tree{
+    left: 728px;
+    top: 390px;
+}
+
+.road1{
+    left: 175px;
+    top: -19px;
+    transform: rotate(-50deg);
+}
+
+.road2{
+    left: 215px;
+    top: 408px;
+}
+
+.road3{
+    left: 347px;
+    top: 685px;
+    transform: rotate(100deg);
+}
+
+.road4{
+    left: 224px;
+    top: 168px;
+    transform: rotate(130deg);
+}
+
+.lake1{
+    left: 377px;
+    top: 820px;
+}
+
+.lake2{
+    left: 646px;
+    top: 748px;
+}
+
+.play_content .text{
+    position: absolute;
+    color:#fff;
+    line-height: 1.6;
+    width: 220px;
+}
+
+.text h2{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.hiking_text{
+    left: 149px;
+    top: 60px;
+}
+
+.yoga_text{
+    left: 305px;
+    top: 287px;
+}
+
+.sup_text{
+    left: 642px;
+    top: 571px;
+}
+
+.diving_text{
+    left: 87px;
+    top: 635px;
+}
+
+.footer{
+    background-color: #025255;
+    height: 300px;
+    margin-top: 100px;
+    font-size: 18px;
+}
+.footer_container{
+    /* border: 1px solid #999; */
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.footer_text{
+    color: white;
+    line-height: 1.8;
+}
+.footer_info{
+    padding-top: 40px; 
+}
+.footer_announce{
+    padding-top: 30px;
+}
+
+.footer_menu{
+    float: right;
+}
+
+.footer_menu li{
+    float: left;
+}
+
+.footer_menu a{
+    font-size: 30px;
+    color: white;
+    padding-right: 30px;
+}
