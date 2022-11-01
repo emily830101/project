@@ -15,5 +15,13 @@ var rooms =
     img: "./image/roomB1.png",
     capacity: 2,
     unavailableDates: []
+},
+{   id: "roomC",
+    name: "樂融家庭房",
+    description: "適合全家或三五好友出遊，享受團聚的歡樂好時光",
+    price: "TWD 20,500",
+    img: "./image/roomC1.png",
+    capacity: 4,
+    unavailableDates: []
 }
 ];
