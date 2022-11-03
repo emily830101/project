@@ -162,43 +162,6 @@ body{
     text-align: center;
 }
 
-.footer{
-    background-color: #025255;
-    height: 300px;
-    margin-top: 100px;
-    font-size: 18px;
-}
-.footer_container{
-    /* border: 1px solid #999; */
-    width: 1000px;
-    margin: 0 auto;
-}
-
-.footer_text{
-    color: white;
-    line-height: 1.8;
-}
-.footer_info{
-    padding-top: 40px; 
-}
-.footer_announce{
-    padding-top: 30px;
-}
-
-.footer_menu{
-    float: right;
-}
-
-.footer_menu li{
-    float: left;
-}
-
-.footer_menu a{
-    font-size: 30px;
-    color: white;
-    padding-right: 30px;
-}
-
 #map
 {
     margin: 20px;
@@ -217,6 +180,48 @@ body{
 
 #branch3:hover{
     background-color: rgb(226, 223, 223);
+}
+
+.footer{
+    background-color: #025255;
+    height: 300px;
+    margin-top: 100px;
+    font-size: 18px;
+}
+.footer_container{
+    /* border: 1px solid #999; */
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footer_text{
+    color: white;
+    line-height: 1.8;
+    /* border: 1px solid #999; */
+    width: 500px;
+   
+}
+.footer_info{
+    padding-top: 40px; 
+}
+.footer_announce{
+    padding-top: 30px;
+}
+
+.footer_menu{
+    padding-top: 180px;
+    padding-left: 140px;
+}
+
+.footer_menu li{
+    float: left;
+}
+
+.footer_menu a{
+    font-size: 30px;
+    color: white;
+    padding-right: 20px;
 }
 
 .bottom_menu{

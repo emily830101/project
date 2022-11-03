@@ -10,11 +10,15 @@
     /* border: 1px solid #999; */
     width: 1000px;
     margin: 0 auto;
+    display: flex;
 }
 
 .footer_text{
     color: white;
     line-height: 1.8;
+    /* border: 1px solid #999; */
+    width: 500px;
+   
 }
 .footer_info{
     padding-top: 40px; 
@@ -24,7 +28,8 @@
 }
 
 .footer_menu{
-    float: right;
+    padding-top: 180px;
+    padding-left: 140px;
 }
 
 .footer_menu li{
@@ -34,7 +39,7 @@
 .footer_menu a{
     font-size: 30px;
     color: white;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 
 .bottom_menu{
