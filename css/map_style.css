@@ -218,3 +218,13 @@ body{
 #branch3:hover{
     background-color: rgb(226, 223, 223);
 }
+
+.bottom_menu{
+    padding-top: 40px;
+    padding-left: 60px;
+}
+
+.bottom_menu a{
+    color:white;
+    line-height: 1.8;
+}
