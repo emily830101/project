@@ -88,7 +88,7 @@ body{
 }
 
 .banner{
-    background-image: url(../image/Rectangle\ 58.png), url(../image/index_bannersmaller.png);
+    background-image: url(../image/Rectangle\ 58.png), url(../image/index_banner.png);
     background-repeat: no-repeat;
     background-size: contain, cover;
     width: 100%;
