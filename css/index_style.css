@@ -152,36 +152,17 @@ body{
     padding: 10px;
     line-height: 1.6;
     cursor: pointer;
+    
 }
 
 .playintro h2{
     font-size: 30px;
     font-weight: bold;
     padding-top: 10px;
-}
-
-.yellow{
-    width: 220px;
-    height: 29px;
-    z-index: -1;
-}
-
-.yellow1{
-    position: absolute;
-    left: 143px;
-    top: 349px;
-}
-
-.yellow2{
-    position: absolute;
-    left: 574px;
-    top: 349px;
-}
-
-.yellow3{
-    position: absolute;
-    left: 991px;
-    top: 349px;
+    background-image: url(../image/yellow.svg);
+    background-repeat: no-repeat;
+    background-size: 230px 35px;
+    background-position: 130px 20px;
 }
 
 .playintro p{
