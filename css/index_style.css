@@ -146,6 +146,11 @@ body{
     position: relative;
 }
 
+.playintro a{
+    text-decoration: none;
+    color:#025255
+}
+
 .playintro li{
     text-align: center;
     box-sizing: border-box;
