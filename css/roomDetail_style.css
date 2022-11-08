@@ -135,19 +135,20 @@ body{
     overflow: hidden;
     margin-top: 5px;
     margin-left: 10px;
-    margin-right: 20px;	
+    margin-right: 40px;	
 }
 
 .rooma h3{
     font-size: 25px;
     color:#797672;
     font-weight: 600;
-    margin: 10px auto 30px auto;
+    margin: 10px 0px 20px auto;
 }
 .rooma p{
    font-size: 20px;
    color: #797672;
    line-height: 1.6;
+   margin-bottom: 20px;
 }
 
 .rooma a{
