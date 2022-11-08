@@ -158,7 +158,15 @@ body{
     line-height: 1.4;
     padding: 20px;
 }
-.result h2{
+
+.result_text h3{
+    color: #797672;
+    font-size: 18px;
+    margin-top: 40px;
+
+}
+
+.result_text h2{
     color: #025255;
     font-size: 30px;
     font-weight: 600;
@@ -172,7 +180,7 @@ body{
 
 .result img{
     border-radius: 15px;
-    margin: 20px;
+    margin: 25px auto 20px 20px;
 }
 
 .price a {
@@ -208,27 +216,13 @@ body{
 
 .price{
     display: flex;
-    margin-top: 100px;
+    margin-top: 10px;
 }
   
 .price h1{
     color: #025255;
     font-size: 22px;
     font-weight: 600;
-}
-
-.notice h3{
-    color: #797672;
-    font-size: 18px;
-    text-decoration: underline;
-    margin-bottom: 20px;
-    margin-left: 50px;
-}
-
-.notice p{
-    margin-left: 50px;
-    font-size: 16px;
-    margin-bottom: 5px;
 }
 
 .footer{
