@@ -172,7 +172,8 @@ body{
     box-sizing: border-box;
 	overflow: hidden;
 	position: relative;
-    padding-top: 5px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
 }
 
 .room_text{
