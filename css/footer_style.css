@@ -17,12 +17,13 @@
     color: white;
     line-height: 1.8;
     /* border: 1px solid #999; */
-    width: 500px;
-   
+    width: 500px; 
 }
+
 .footer_info{
     padding-top: 40px; 
 }
+
 .footer_announce{
     padding-top: 30px;
 }
@@ -50,4 +51,42 @@
 .bottom_menu a{
     color:white;
     line-height: 1.8;
+}
+
+@media  screen and (max-width: 428px){
+  
+    .footer{
+        height: auto;
+        font-size: 12px;
+    }
+
+    .footer_container{
+        /* border: 1px solid #999; */
+        width: auto;
+    }
+
+    .footer_text{
+        line-height: 1.6;
+        /* border: 1px solid #999; */
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .footer_info{
+        padding-top: 30px;
+        font-size: 12px;
+    }
+
+    .footer_announce{
+        padding-top: 30px;
+    }
+    
+    .footer_menu{
+        display: none;
+    }
+    
+    .bottom_menu{
+        display: none;
+    }
+
 }
