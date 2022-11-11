@@ -380,6 +380,14 @@ body{
     color: rgb(95, 93, 93);
 }
 
+.room a:hover{
+    display: none;
+}
+
+.room:hover{
+    display: none;
+}
+
 .footer{
     height: auto;
     font-size: 12px;
