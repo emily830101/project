@@ -43,19 +43,20 @@ body{
     font-size: 18px;
   }
 
-  /* .nav_links .item a{
+    .nav_links .item a{
     text-decoration: none;
-    font-size: 20px;
+    /* font-size: 20px; */
     color:#025255;
-}
+    }
 
-.nav_links .item a:hover{
+    .nav_links .item a:hover{
     color:#F9C50F;
-}
+    }
 
-.nav_links .item:nth-child(1) a {
-    border-bottom: 3px solid #025255;
-} */
+    .nav_links .item:nth-child(1) a {
+    background-color: #025255;
+    color: #fff;
+    }
 
   .booking a{
   appearance: none;
@@ -283,8 +284,8 @@ body{
     line-height: 1.8;
 }
 
-/*------------------428--------------------*/
-@media  screen and (max-width: 428px){
+ /*------------------428--------------------*/
+    @media  screen and (max-width: 428px){
     .navbar_content{
         width: auto;
         height: 60px;
@@ -323,6 +324,14 @@ body{
         border-bottom: 1px solid #fff;
     }
 
+    .banner{
+        background-image: url(../image/room_banner.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding-top: 40%;
+    }
+
     .room_container{
         border: 1px solid #999;
         width: auto;
@@ -346,81 +355,79 @@ body{
         transform: translate(-150%, 35%);
     }
 
-.room{
+    .room{
     width:calc( 100% - 30px);
 	padding: 10px;
 	background-color: rgb(238, 234, 234);
     margin: 30px 15px;
-}
+    }
 
-.room img{
+    .room img{
     float: 0;
     width: 100%;
     padding: 8px;
     border-radius: 12px;
-}
+    }
 
-.room_text{
+    .room_text{
     width: auto;
     /* border: 2px solid #999; */
     padding: 20px;
     float: 0;
-}
+    }
 
-.room h3{
+    .room h3{
     font-size: 30px;
     color:#025255;
     font-weight: bold;
     margin-top: 30px;
     margin-bottom: 30px;
-}
+    }
 
-.room p{
+    .room p{
     font-size: 20px;
     color: rgb(95, 93, 93);
-}
+    }
 
-.room a:hover{
+    .room a:hover{
     display: none;
-}
+    }   
 
-.room:hover{
+    .room:hover{
     display: none;
-}
+    }
 
-.footer{
+    .footer{
     height: auto;
     font-size: 12px;
-}
+    }
 
-.footer_container{
+    .footer_container{
     border: 1px solid #999;
     width: auto;
-}
+    }
 
-.footer_text{
+    .footer_text{
     line-height: 1.6;
     /* border: 1px solid #999; */
     width: auto;
     margin: 0 auto;
-}
+    }
 
-.footer_info{
+    .footer_info{
     padding-top: 30px;
     font-size: 12px;
-}
+    }
 
-.footer_announce{
+    .footer_announce{
     padding-top: 30px;
-}
+    }   
 
-.footer_menu{
+    .footer_menu{
     display: none;
-}
+    }
 
-.bottom_menu{
+    .bottom_menu{
     display: none;
-}
-
-
+    }
   }

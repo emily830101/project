@@ -326,10 +326,9 @@
 
     .banner{
         background-image: url(../image/Rectangle\ 58.png), url(../image/index_banner.png);
-        background-repeat: no-repeat;
         background-size: cover, cover;
         width: 100%;
-        padding-top: calc( 28.6% - 35px);
+        padding-top: calc(28.6% - 35px);
         /* padding-bottom: 2.3%; */
         background-position: center, center;
     }

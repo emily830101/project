@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Geht's</title>
     <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./plugin/splide4.1.3/css/splide.min.css">
     <link rel="stylesheet" href="./css/restaurant_style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
 </head>
 <body>
      
-    <!--nav bar -->
-    <nav class="navbar">
-        
-        <a href="index.html" class="logo">
+      <!--nav bar -->
+      <nav class="navbar">
+        <div class="navbar_content">
+        <a href="index.html">
               <img src="./image/logo.svg" alt="">
           </a>
+          <i class="fa-solid fa-bars"></i>
           <ul class="nav_links">
               <li class="item"><a href="room.html">客房資訊</a></li>
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
@@ -24,12 +26,12 @@
               <li class="item"><a href="map.html">Los Geht's分館</a></li>
               <li class="booking"><a href="booking.html">立即訂房</a></li>
           </ul>
-  
+        </div>
       </nav>
 
      <!-- 大banner -->
-     <div class="banner">
-        <p>Los Geht's提供各國珍饈佳餚<br>讓您體驗經典菜色與創意靈感之交匯</p>
+    <div class="banner">
+        <p>Los Geht's提供各國珍饈佳餚<br>邀您體驗經典菜色與創意靈感之交匯</p>
     </div>
 
     <div class="container">
@@ -43,6 +45,18 @@
                 <li class="item3"></li>
             </ul>
         </div>
+        <div class="food_splide_maison">
+            <section class="splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="./image/Rectangle 98.png" alt=""></li>
+                        <li class="splide__slide"><img src="./image/Rectangle 99.png" alt=""></li>
+                        <li class="splide__slide"><img src="./image/Rectangle 101.png" alt=""></li>
+                        <li class="splide__slide"><img src="./image/Rectangle 105.png" alt=""></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
 
         <div class="japan">
             <h2>隱糧軒亞洲餐廳</h2>
@@ -53,6 +67,20 @@
                 <li class="item5"></li>
                 <li class="item6"></li>
             </ul>
+        </div>
+ 
+
+        <div class="food_splide_japan">
+            <section class="splide" id="splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="./image/Rectangle 100.png" alt=""></li>
+                        <li class="splide__slide"><img src="./image/Rectangle 97.png" alt=""></li>
+                        <li class="splide__slide"><img src="./image/Rectangle 95.png" alt=""></li>
+                        <li class="splide__slide"><img src="./image/Rectangle 106.png" alt=""></li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </div>
 
@@ -81,5 +109,20 @@
     </div>
 </footer>
 
+<script src="./plugin/splide4.1.3/js/splide.min.js"></script>
+
+<script>
+    var elms = document.getElementsByClassName( 'splide' );
+    console.log(elms);
+    
+    for (var i = 0; i < elms.length; i++ ) {
+        var splide = new Splide(elms[i], {
+            type  : 'fade',
+            rewind: true,
+        });
+        splide.mount();
+    }
+
+</script>
 </body>
 </html>
