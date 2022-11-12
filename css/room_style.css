@@ -390,11 +390,14 @@ body{
     }
 
     .room a:hover{
-    display: none;
-    }   
-
+        background-color: #949394;
+        color: #fff;
+        /* border: 1px solid black; */
+    }
+    
     .room:hover{
-    display: none;
+        background-color: rgb(238, 234, 234);
+        width: auto;
     }
 
     .footer{
