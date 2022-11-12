@@ -13,12 +13,14 @@
 
 <body>
     
-     <!--nav bar -->
-     <nav class="navbar">
-        
-        <a href="index.html" class="logo">
+      
+    <!--nav bar -->
+    <nav class="navbar">
+        <div class="navbar_content">
+          <a href="index.html">
               <img src="./image/logo.svg" alt="">
           </a>
+          <i class="fa-solid fa-bars"></i>
           <ul class="nav_links">
               <li class="item"><a href="room.html">客房資訊</a></li>
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
@@ -26,8 +28,8 @@
               <li class="item"><a href="map.html">Los Geht's分館</a></li>
               <li class="booking"><a href="booking.html">立即訂房</a></li>
           </ul>
-
-      </nav>
+        </div>
+    </nav>
 
     <!-- 大banner -->
     <div class="banner">
@@ -36,10 +38,27 @@
     <!--主要照片--> 
     <div class="rooma">
         <img src="./image/roomA1.png" alt="">
-        <h3>典雅日系雙人房</h3>
+        <h3>典雅日系雙人房</h3> 
+        <div class="detail_container_rwd">
+            <section class="splide" id="splide_mobile" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                      <li class="splide__slide"><img src="./image/Rectangle 9.png" alt=""></li>
+                      <li class="splide__slide"><img src="./image/Rectangle 10.png" alt=""></li>
+                      <li class="splide__slide"><img src="./image/Rectangle 11.png" alt=""></li>
+                      <li class="splide__slide"><img src="./image/Rectangle 17.png" alt=""></li>
+                      <li class="splide__slide"><img src="./image/Rectangle 18.png" alt=""></li>
+                      <li class="splide__slide"><img src="./image/Rectangle 72.png" alt=""></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
         <p>現代經典的俐落空間，暖陽灑落的明亮窗景，打造無壓的休憩空間，舒適的臥房和寬敞的露臺，如空中花園般將綠意山景收入眼底，適合情侶、夫妻享受悠閒假期</p>
+        <h4>人數:2人</h4>
         <a href="booking.html">立即訂房</a>
     </div> 
+
+    
 
     <div class="facility">
         <h3>客房設施</h3>
@@ -47,7 +66,7 @@
     </div>
 
     <div class="detail_container">
-        <section class="splide" aria-label="Splide Basic HTML Example">
+        <section class="splide" id="splide_desktop" aria-label="Splide Basic HTML Example">
             <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide"><img src="./image/Rectangle 9.png" alt=""></li>
@@ -58,7 +77,7 @@
                   <li class="splide__slide"><img src="./image/Rectangle 72.png" alt=""></li>
                 </ul>
             </div>
-      </section>
+        </section>
     </div>
 
      <!--Footer-->
@@ -89,14 +108,27 @@
   <script src="./plugin/splide4.1.3/js/splide.min.js"></script>
 
   <script>
-    var splide = new Splide( '.splide', {
+    var splideMobile = new Splide( '#splide_mobile', {
+    type   : 'loop',
+    perPage: 1,
+    perMove: 1,
+    padding: { left: 80, right: 80 },
+    speed: 500,
+    easing: 'cubic-bezier(0,.91,.02,.92)'
+    } );
+
+    splideMobile.mount();
+
+  
+    var splideDesktop = new Splide( '#splide_desktop', {
     type   : 'loop',
     perPage: 3,
     perMove: 1,
     padding: { left: 50, right: 50 }
     } );
 
-    splide.mount();
+    splideDesktop.mount();
+   
   </script>
 
 
