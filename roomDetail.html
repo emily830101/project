@@ -62,8 +62,10 @@
         <h3>客房設施</h3>
         <p>溫馨舒眠的羽絨被及羽絨枕<br>礦泉水及特色小點心<br>Nespresso咖啡機<br>40吋Sony Bravia高畫質液晶電視</p>
     </div>
-    <button id="rwd_bookingButton">立即訂房</button>
-    <button id="rwd_backButton">返回</button>
+    <div class="bottom">
+        <button id="rwd_backButton">返回</button>
+        <button id="rwd_bookingButton">立即訂房</button>
+    </div>
 
     <div class="detail_container">
         <section class="splide" id="splide_desktop" aria-label="Splide Basic HTML Example">
@@ -133,7 +135,7 @@
     rwd_bookingButton.addEventListener("click", function(){
         window.location.href = "booking.html";
     })
-    
+
     let rwd_backButton = document.getElementById("rwd_backButton");
     rwd_backButton.addEventListener("click", function(){
         window.location.href = "room.html";
