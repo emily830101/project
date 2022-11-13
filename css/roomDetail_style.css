@@ -270,6 +270,7 @@ body{
         right: 0;
         top: 60px;
         width: 100%;
+        z-index: 1;
     }
   
     .navbar_content .fa-solid:hover ~ ul{
@@ -333,15 +334,21 @@ body{
     .facility{
         /* border: 1px solid #999; */
         width: auto;
-        margin: 0 20px 30px 20px;
+        margin: 0 0 30px 0;
+        background-color: #797672;
+        padding: 20px;
     }
 
     .facility h3{
         text-align: center;
+        color:#fff;
+        
     }
 
     .facility p{
         line-height: 1.6;
+        color: #fff;
+        
     }
 
 
