@@ -126,7 +126,11 @@ body{
     line-height: 1.6;
 }
 
-.rwd_bookingButton{
+#rwd_bookingButton{
+    display: none;
+}
+
+#rwd_backButton{
     display: none;
 }
 
@@ -354,7 +358,7 @@ body{
         color: #797672;
     }
 
-    .rwd_bookingButton{
+    #rwd_bookingButton{
         display: block;
         width: 100vw;
         line-height: 2.5;
@@ -363,14 +367,19 @@ body{
         border: none;
         color: #fff;
         font-size: 16px;
+        margin-bottom: 10px;
     }
-   
 
-
-
-
-
-
+    #rwd_backButton{
+        display: block;
+        width: 100vw;
+        line-height: 2.5;
+        background-color: rgb(219, 219, 219);
+        text-align: center;
+        border: none;
+        color: #797672;
+        font-size: 16px;
+    }
     
     .footer{
         height: auto;
