@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/play_style.css">
     <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">
 </head>
 <body>
      
@@ -33,36 +34,36 @@
         <p>Los Geht's不只照顧您的旅途<br>更想與您分享這座城市的美好<br>無論是上山或下海<br>Los Geht's有最專業的嚮導<br>帶您感受這裡的好時光</p>
     </div>
 
-    <div class="play_notice">
-        <h3>出團注意事項</h3>
-        <p>所有行程皆由Los Geht's專業導遊帶領<br>各團出發時間及費用不同，詳情及報名請洽櫃台<br>費用皆包含餐點及保險</p>
+    <div class="play_notice" id="notice1">
+        <h3>體驗活動</h3>
+        <p>出花蓮港賞鯨、季節限定溪谷溯溪、獵人學校體驗，Los Geht's精選一系列花蓮在地特色體驗活動。如果你願意花上半天，打開感官，交換幾則在地的故事、試試更深度的旅遊方式，那麼你一定要看看！這份我們精心為你準備的體驗活動清單。</p>
     </div>
 
     <div class="play_content">
             <div class="play">
                 <img src="./image/hiking.png" class="pic1" alt="">
-                <div class=" text hiking_text">
+                <div class=" text hiking_text" data-aos="fade-up" data-aos-duration="2000">
                     <h2>北德拉曼健行</h2>
                     <p>北德拉曼山以拉曼神木群而聞名，路途平坦，適合新手挑戰</p>
                 </div>
             </div>
             <div class="play">
                 <img src="./image/yoga.png" class="pic2" alt="">
-                <div class=" text yoga_text">
+                <div class=" text yoga_text" data-aos="fade-up" data-aos-duration="2000">
                     <h2>戶外瑜珈</h2>
                     <p>瑜伽可以穩定自律神經、提升專注力，藉由優質的戶外環境，達到放鬆身心及穩定情緒的目的</p>
                 </div>
             </div>
             <div class="play">
                 <img src="./image/sup.png" class="pic3" alt="">
-                <div class="text sup_text">
+                <div class="text sup_text" data-aos="fade-up" data-aos-duration="2000">
                     <h2>新山SUP立槳</h2>
                     <p>划著一板一槳，帶您欣賞日出，體驗無垠海洋之美</p>
                 </div>
             </div>
             <div class="play">
                 <img src="./image/diving.png" class="pic4" alt="">
-                <div class="text diving_text">
+                <div class="text diving_text" data-aos="fade-up" data-aos-duration="2000">
                     <h2>牛奶湖浮潛</h2>
                     <p>牛奶湖位於活火山附近，海面呈現出乳白與天空藍的漸層色澤，海底則有豐富的動物生態，可以看見海龜和珊瑚唷!</p>
                 </div>
@@ -81,6 +82,11 @@
                 <img src="./image/forest/lake_24.png" class="lake1" width="400px" height="155px">
                 <img src="./image/forest/lake_24.png" class="lake2" width="200px" height="75px">
             </div>
+    </div>
+
+    <div class="play_notice" id="notice2">
+        <h3>出團注意事項</h3>
+        <p>所有行程皆由Los Geht's專業導遊帶領<br>各團出發時間及費用不同，詳情及報名請洽櫃台<br>費用皆包含餐點及保險</p>
     </div>
 
     <!--Footer-->
@@ -107,5 +113,10 @@
             </div>
         </div>
     </footer>
+
+<script src="./plugin/aos-master/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

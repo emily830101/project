@@ -232,12 +232,6 @@ body{
     top: 390px;
 }
 
-.road1{
-    left: 175px;
-    top: -19px;
-    transform: rotate(-50deg);
-}
-
 .road2{
     left: 215px;
     top: 408px;
@@ -297,6 +291,11 @@ body{
     left: 87px;
     top: 635px;
 }
+
+#notice1{
+    padding: 30px;
+}
+
 
 .footer{
     background-color: #025255;
@@ -406,9 +405,6 @@ body{
         margin-left: auto;
         padding-bottom: 35px;
     }
-    .play_notice{
-      
-    }
     
     .play_notice h3{
         font-size: 22px;
@@ -421,27 +417,27 @@ body{
        margin-bottom: 20px;
     }
 
-    .play_content{
+    .play_content{ 
         position: static;
         width: auto;
         height: 100%;
-        background-color: transparent;
+        background-color: rgba(26, 88, 90, 1);
     }
     
     .play_content img{
-        width: auto;
         position: static;
+        display: block;
     }
 
     .play_content .pic1,.play_content .pic2,.play_content .pic3,.play_content .pic4{
         margin-bottom: 20px;
-        border-radius: 0%;
+        margin: 10px auto;
     }
 
     .play_content .text{
         position: static;
-        color: black;
-        margin: 0 auto;
+        color: #fff;
+        margin: 20px auto;
     }
     
     .play_content .text p{
@@ -449,16 +445,68 @@ body{
     }
 
     .play{
-        /* border: 1px solid black; */
+        border: 1px solid transparent;
         width: 267px;
         margin: 20px auto;
     }
 
     .forest{
+        position: relative;
+    }
+
+    .forest img{
+        position: absolute;
+    }
+
+    .appletree{
+        left: 304px;
+        top: -529px;
+    }
+    .christmastree{
+        left: 322px;
+        top: -1262px;
+    }
+    .darktree{
+        left: 25px;
+        top: -1017px;
+    }
+    
+    .circletree{
+        left: 310px;
+        top: -1060px;
+    }
+    .tree{
+        left: 32px;
+        top: -630px;
+    }
+
+    .lake1{
+        width: 120px;
+        height: 60px;
+        left: 269px;
+        top: -937px;
+    }
+
+    .lake2{
+        width: 150px;
+        height: 40px;
+        left: -1px;
+        top: -194px;
+    }
+
+    .road2{
+        left: 28px;
+        top: -1316px;
+        width: 100px;
+        height: 90px;
+        transform: rotate(102deg);
+    }
+    
+    .forest .road1, .forest .road2, .forest .road3, .forest .road4, .forest .mountain1, .forest .mountain2{
         display: none;
     }
 
-    
+   
 
 
 
