@@ -13,12 +13,14 @@
 </head>
 <body>
      
-    <!--nav bar -->
-    <nav class="navbar">
-        
-        <a href="index.html" class="logo">
+    
+     <!--nav bar -->
+     <nav class="navbar">
+        <div class="navbar_content">
+        <a href="index.html">
               <img src="./image/logo.svg" alt="">
           </a>
+          <i class="fa-solid fa-bars"></i>
           <ul class="nav_links">
               <li class="item"><a href="room.html">客房資訊</a></li>
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
@@ -26,7 +28,7 @@
               <li class="item"><a href="map.html">Los Geht's分館</a></li>
               <li class="booking"><a href="booking.html">立即訂房</a></li>
           </ul>
-  
+        </div>
       </nav>
 
     <!-- 大banner -->
@@ -37,11 +39,13 @@
     <div class="choose">
         <div class="content">
             <div class="date">
-                <label for="">選擇日期:</label>
-                <label for="from">從</label>
-                <input type="text" id="from" name="from" autocomplete="off">
-                <label for="to">到</label>
-                <input type="text" id="to" name="to" autocomplete="off">
+                <label for="" class="choose_date">選擇日期:</label>
+                <div class="date_pick">
+                    <label for="from">從</label>
+                    <input type="text" id="from" name="from" autocomplete="off">
+                    <label for="to">到</label>
+                    <input type="text" id="to" name="to" autocomplete="off">
+                </div>
             </div>
 
             <form class="number">

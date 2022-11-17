@@ -298,6 +298,9 @@ body{
       border: none;
     }
 
+    .branch:hover{
+        display: none;
+    }
 
     .branch img{
         width: 90%;
