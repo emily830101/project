@@ -13,10 +13,11 @@
     
     <!--nav bar -->
     <nav class="navbar">
-        
-        <a href="index.html" class="logo">
+        <div class="navbar_content">
+        <a href="index.html">
               <img src="./image/logo.svg" alt="">
           </a>
+          <i class="fa-solid fa-bars"></i>
           <ul class="nav_links">
               <li class="item"><a href="room.html">客房資訊</a></li>
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
@@ -24,7 +25,7 @@
               <li class="item"><a href="map.html">Los Geht's分館</a></li>
               <li class="booking"><a href="booking.html">立即訂房</a></li>
           </ul>
-  
+        </div>
       </nav>
 
     <!-- 大banner -->
@@ -33,8 +34,6 @@
 
     <div class="confirm">
         <div class="date">
-            <h1>確認您的預定資料:</h1>
-            <p>從2022年11月2日到2022年11月3日</p>
         </div>
 
         <ul>
@@ -97,5 +96,34 @@
     </div>
 </footer>
  
+    <script src="./plugin/jQuery3.6.0/jquery.js"></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script>
+
+    function getUrlVars(){
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for(var i = 0; i < hashes.length; i++)
+        {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+
+        $(function(){
+            getUrlVars();
+            console.log(getUrlVars());
+            let from = getUrlVars()["from"];
+            let to = getUrlVars()["to"];
+            $(".date").append(
+                `<h1>確認您的預定資料:</h1>
+                <p>從${from}到${to}</p>`
+            )
+            
+        });
+
+    </script>
 </body>
 </html>

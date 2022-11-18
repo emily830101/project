@@ -35,35 +35,36 @@
     <div class="banner">
         <p>從Los Geht's向世界的角落出發!</p>
     </div>
+    <form action="confirm.html"> 
+        <div class="choose">
+                <div class="content">
+                    <div class="date">
+                        <label for="" class="choose_date">選擇日期:</label>
+                        <div class="date_pick">
+                            <label for="from">從</label>
+                            <input type="text" id="from" name="from" autocomplete="off">
+                            <label for="to">到</label>
+                            <input type="text" id="to" name="to" autocomplete="off">
+                        </div>
+                    </div>
 
-    <div class="choose">
-        <div class="content">
-            <div class="date">
-                <label for="" class="choose_date">選擇日期:</label>
-                <div class="date_pick">
-                    <label for="from">從</label>
-                    <input type="text" id="from" name="from" autocomplete="off">
-                    <label for="to">到</label>
-                    <input type="text" id="to" name="to" autocomplete="off">
+                    <div class="number">
+                        <label for="peolple">入住人數</label>
+                            <select id="people">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                    </div>
                 </div>
-            </div>
-
-            <form class="number">
-                <label for="peolple">入住人數</label>
-                    <select id="people">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-            </form>
         </div>
-    </div>
 
         <div class="result">
             <ul id="result">
             </ul>
         </div>
+    </form>
 
         <!--Footer-->
    <footer>
@@ -93,6 +94,7 @@
    
 
     <script src="./plugin/jQuery3.6.0/jquery.js"></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./plugin/jquery-ui-1.13.2/jquery-ui.js"></script>
     <script src="./js/database.js"></script>
 
@@ -168,11 +170,11 @@
                     addRoom(room);
                 }
             }
-        }
+        };
 
         function cleanRooms() {
             document.getElementById("result").innerHTML = "";
-        }
+        };
 
         function addRoom(room) {
             console.log(room);
@@ -188,12 +190,13 @@
                             <h3>人數: ${room.capacity}人(含)以下</h3>
                             <div class="price">
                                 <h1>${room.price}</h1>
-                                <a href="confirm.html">選擇</a>
+                                <button id="btn">選擇</button>
                             </div>
                         </div>
                     </li>`
             );
-        }
+        };
+
     </script>
 
 

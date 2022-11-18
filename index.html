@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/index_style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
+    <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -32,7 +33,9 @@
 
     <!-- 大banner -->
     <div class="banner">
-        <p>Los Geht's是德文出發的意思<br>我們提供舒服放鬆的住宿環境<br>讓您一夜好眠後帶著滿滿活力<br>朝世界各個美好的角落出發!</p>
+        <p data-aos="fade-zoom-in"
+        data-aos-duration="1700"
+        data-aos-easing="ease-in">Los Geht's是德文出發的意思<br>我們提供舒服放鬆的住宿環境<br>讓您一夜好眠後帶著滿滿活力<br>朝世界各個美好的角落出發!</p>
     </div>
 
     <div class="index_container">
@@ -108,5 +111,10 @@
             </div>
         </div>
     </footer>
+
+<script src="./plugin/aos-master/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
