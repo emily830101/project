@@ -102,11 +102,12 @@ body{
   }
 
 .banner{
-    background-image: url(../image/roomDetail_banner.png);
+    background-image: url(../image/roomDetail_banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    padding-top: 40%;
+    padding-top: 35%;
+    background-position: center center;
 }
 
 .facility{

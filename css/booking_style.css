@@ -417,10 +417,6 @@ body{
     #btn {
         margin-left: 120px;
       }
-      
-    #btn:hover {
-        display: none;
-      }
         
     .price h1{
           font-size: 16px;

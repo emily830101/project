@@ -84,6 +84,7 @@ body{
   box-shadow: none;
   transform: translateY(0);
   }
+  
 .banner{
     background-image: url(../image/booking_banner.png);
     background-repeat: no-repeat;

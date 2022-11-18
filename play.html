@@ -41,7 +41,8 @@
         <p>出哈達港賞鯨、季節限定溪谷溯溪、獵人學校體驗，Los Geht's精選一系列在地特色體驗活動。如果你願意花上半天，打開感官，交換幾則在地的故事、試試更深度的旅遊方式，那麼你一定要看看！這份我們精心為你準備的體驗活動清單。</p>
     </div>
 
-    <div class="play_content">
+    <div class="play_content" id = "play_content">
+        <div id="play_container">
             <div class="play">
                 <img src="./image/hiking.png" class="pic1" alt="">
                 <div class=" text hiking_text" data-aos="fade-up" data-aos-duration="1500">
@@ -84,6 +85,7 @@
                 <img src="./image/forest/lake_24.png" class="lake1" width="400px" height="155px">
                 <img src="./image/forest/lake_24.png" class="lake2" width="200px" height="75px">
             </div>
+        </div>
     </div>
 
     <div class="play_notice" id="notice2">
@@ -119,6 +121,24 @@
 <script src="./plugin/aos-master/dist/aos.js"></script>
     <script>
         AOS.init();
+        document.addEventListener("DOMContentLoaded", () => {
+            center();
+        });
+        window.onresize = center;
+        function center() {
+            let width = document.body.clientWidth;
+            if (width < 1200) {
+                return;
+            }
+            let playContent= document.getElementById("play_content");
+            let playContainer = document.getElementById("play_container");
+            let img2 = document.getElementsByClassName("pic2")[0];
+            let lake2 = document.getElementsByClassName("lake2")[0];
+            let playContainerWidth = lake2.getBoundingClientRect().right * 1.05 - img2.getBoundingClientRect().left;
+            let pos = (playContent.offsetWidth - playContainerWidth) / 2;
+            playContainer.style.translate = pos + "px";
+            // console.log(pos);
+        }
     </script>
 </body>
 </html>

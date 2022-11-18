@@ -105,7 +105,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    padding-top: 40%;
+    padding-top: 35%;
 }
 
 .room_container{
@@ -116,13 +116,13 @@ body{
 
 .notice{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 28px;
 }
 
 .notice h3{
     color: #F9C50F;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 600;
 }
 
