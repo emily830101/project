@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/map_style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
+    <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">
 </head>
 <body>
       
@@ -30,7 +31,9 @@
 
     <!-- 大banner -->
     <div class="banner">
-        <p>Los Geht's擁有多家分館<br>無論您在世界的哪個角落<br>都能享受Los Geht's的頂級服務</p>
+        <p data-aos="fade-zoom-in"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in">Los Geht's擁有多家分館<br>無論您在世界的哪個角落<br>都能享受Los Geht's的頂級服務</p>
     </div>
 
     <div class="map_container">
@@ -67,6 +70,12 @@
         <img class="marker" src="./image/mapMarker.svg" alt="">
     </div>
 
+    <div id="lightbox" class="none">
+        <article>
+            <div id="mapMobile"></div>
+        </article>
+    </div>
+
 
     <!--Footer-->
     <footer>
@@ -95,7 +104,7 @@
 
     <script type="text/javascript">
         function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
+            var map = new google.maps.Map(document.getElementById('map', 'mapMobile'), {
                 center: {lat: 25.04, lng: 121.512},
                 zoom: 13
             });
@@ -159,6 +168,21 @@
           
         </script>
 
+<script src="./plugin/aos-master/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+<script src="./js/jquery-3.6.1.min.js"></script>
+<script>
+    //點地圖開啟燈箱(none帶有display none燈箱的性質，移除他來顯現燈箱)
+    $(".map_icon").on("click", function(){
+        $("#lightbox").removeClass("none");
+    });
+    //點其他地方關閉燈箱
+
+
+</script>
     
 </body>
 </html>
