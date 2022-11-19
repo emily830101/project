@@ -71,9 +71,7 @@
     </div>
 
     <div id="lightbox" class="none">
-        <article>
-            <div id="mapMobile"></div>
-        </article>
+        <div id="mapMobile"></div>
     </div>
 
 
@@ -104,11 +102,19 @@
 
     <script type="text/javascript">
         function initMap() {
-            var map = new google.maps.Map(document.getElementById('map', 'mapMobile'), {
+            var map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: 25.04, lng: 121.512},
                 zoom: 13
             });
-            
+            var mapMobile = new google.maps.Map(document.getElementById('mapMobile'), {
+                center: {lat: 25.04, lng: 121.512},
+                zoom: 13
+            });
+            initMaker(map);
+            initMaker(mapMobile);
+        }
+
+        function initMaker(map) {
             // 濟南館
             var marker1 = new google.maps.Marker({
                 position: {lat: 25.0417156, lng: 121.5256624}, // 定位
@@ -175,12 +181,10 @@
 
 <script src="./js/jquery-3.6.1.min.js"></script>
 <script>
-    //點地圖開啟燈箱(none帶有display none燈箱的性質，移除他來顯現燈箱)
-    $(".map_icon").on("click", function(){
-        $("#lightbox").removeClass("none");
+    //點一下地圖(移除class none)開啟燈箱，再點一下(加入class none)關閉燈箱
+    $(".map_icon, #lightbox").on("click", function(){
+        $("#lightbox").toggleClass("none");
     });
-    //點其他地方關閉燈箱
-
 
 </script>
     
