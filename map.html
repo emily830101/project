@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="branch" id="branch2">
-            <img src="./image/bramch2.png" alt="">
+            <img src="./image/branch2.png" alt="">
             <div class="branch_text">
                 <h2>Los Geht's 濱江館</h2>
                 <h3>以傲人之姿座落於國家公園境內的國際五星級度假酒店，秀麗山色即是天然藝術品。任何季節來訪皆有不同的景色，面峽谷、望山嵐、聆聽溪水協奏曲，恣意享受來自太魯閣的清新與暖意。</h3>
@@ -133,17 +133,13 @@
                 toggleBounce(marker1);
                 console.log("Leave");
             });
-            var contentString1 = "<h1>濟南館</h1><br><h2>台北市中正區濟南路一段100號</h2>";
+            var contentString1 = "<h1>濟南館</h1><br><h2>台北市中正區濟南路一段100號</h2><img src='./image/branch1.png'>";
             var infowindow1 = new google.maps.InfoWindow({
                 content: contentString1
             });
 
-            marker1.addListener('mouseover', function() {
+            marker1.addListener('click', function() {
                 infowindow1.open(map, marker1); //設定滑入 marker 打開資訊視窗事件
-            });
-
-            marker1.addListener('mouseout', function() {
-                infowindow1.close(map, marker1); //設定滑出 marker 關閉資訊視窗事件
             });
 
             // 濱江館
@@ -159,16 +155,12 @@
             document.getElementById("branch2").addEventListener("mouseleave", () => {
                 toggleBounce(marker2);
             });
-            var contentString2 = "<h1>濱江館</h1><br><h2>台北市中山區濱江街5號</h2>";
+            var contentString2 = "<h1>濱江館</h1><br><h2>台北市中山區濱江街5號</h2><img src='./image/branch2.png'>";
             var infowindow2 = new google.maps.InfoWindow({
                 content: contentString2
             });
-            marker2.addListener('mouseover', function() {
+            marker2.addListener('click', function() {
                 infowindow2.open(map, marker2); //設定滑入 marker 打開資訊視窗事件
-            });
-
-            marker2.addListener('mouseout', function() {
-                infowindow2.close(map, marker2); //設定滑出 marker 關閉資訊視窗事件
             });
 
             // 中正館
@@ -188,12 +180,8 @@
             var infowindow3 = new google.maps.InfoWindow({
                 content: contentString3
             });
-            marker3.addListener('mouseover', function() {
+            marker3.addListener('click', function() {
                 infowindow3.open(map, marker3); //設定滑入 marker 打開資訊視窗事件
-            });
-
-            marker3.addListener('mouseout', function() {
-                infowindow3.close(map, marker3); //設定滑出 marker 關閉資訊視窗事件
             });
         }
 

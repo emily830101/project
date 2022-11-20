@@ -437,3 +437,14 @@ body{
         display: none;
     }
 }
+
+/* @media  screen and (max-width: 375px){
+    .map_icon p{
+        color: #025255;
+        font-size: 22px;
+        font-weight: 600;
+        position: absolute;
+        top: 100px;
+        left: 117px;
+    }
+} */
