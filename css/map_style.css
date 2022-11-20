@@ -231,6 +231,11 @@ body{
 } 
 /*-------------------- 428 ---------------------*/
 @media  screen and (max-width: 428px){
+    
+    .disabled{
+        overflow: hidden;
+    }
+
     .navbar_content{
         width: auto;
         height: 60px;
@@ -374,7 +379,7 @@ body{
     }
 
     .none{
-          display: none;
+        display: none;
     }
 
     .marker{

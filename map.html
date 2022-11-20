@@ -101,6 +101,7 @@
         </div>
     </footer>
 
+<script src="./js/jquery-3.6.1.min.js"></script>
     <script type="text/javascript">
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -120,7 +121,7 @@
             var marker1 = new google.maps.Marker({
                 position: {lat: 25.0417156, lng: 121.5256624}, // 定位
                 map: map,
-                title:'濟南館'
+                // title:'濟南館'
             }); 
             marker1.setMap(map);
             // 註冊mouse enter, mouse leave事件
@@ -131,6 +132,18 @@
             document.getElementById("branch1").addEventListener("mouseleave", () => {
                 toggleBounce(marker1);
                 console.log("Leave");
+            });
+            var contentString1 = "<h1>濟南館</h1><br><h2>台北市中正區濟南路一段100號</h2>";
+            var infowindow1 = new google.maps.InfoWindow({
+                content: contentString1
+            });
+
+            marker1.addListener('mouseover', function() {
+                infowindow1.open(map, marker1); //設定滑入 marker 打開資訊視窗事件
+            });
+
+            marker1.addListener('mouseout', function() {
+                infowindow1.close(map, marker1); //設定滑出 marker 關閉資訊視窗事件
             });
 
             // 濱江館
@@ -146,6 +159,17 @@
             document.getElementById("branch2").addEventListener("mouseleave", () => {
                 toggleBounce(marker2);
             });
+            var contentString2 = "<h1>濱江館</h1><br><h2>台北市中山區濱江街5號</h2>";
+            var infowindow2 = new google.maps.InfoWindow({
+                content: contentString2
+            });
+            marker2.addListener('mouseover', function() {
+                infowindow2.open(map, marker2); //設定滑入 marker 打開資訊視窗事件
+            });
+
+            marker2.addListener('mouseout', function() {
+                infowindow2.close(map, marker2); //設定滑出 marker 關閉資訊視窗事件
+            });
 
             // 中正館
             var marker3 = new google.maps.Marker({
@@ -160,6 +184,17 @@
             document.getElementById("branch3").addEventListener("mouseleave", () => {
                 toggleBounce(marker3);
             });
+            var contentString3 = "<h1>中正館</h1><br><h2>台北市中正區中山南路21號</h2><img src='./image/branch3.png'>";
+            var infowindow3 = new google.maps.InfoWindow({
+                content: contentString3
+            });
+            marker3.addListener('mouseover', function() {
+                infowindow3.open(map, marker3); //設定滑入 marker 打開資訊視窗事件
+            });
+
+            marker3.addListener('mouseout', function() {
+                infowindow3.close(map, marker3); //設定滑出 marker 關閉資訊視窗事件
+            });
         }
 
         function toggleBounce(marker) {
@@ -169,25 +204,29 @@
                 marker.setAnimation(google.maps.Animation.BOUNCE);
             }
         }
+
+     
+
     </script>
         <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_pWa8kGfXLWju54TBEsqs7hGFSMV9DAA&callback=initMap">
-          
-        </script>
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_pWa8kGfXLWju54TBEsqs7hGFSMV9DAA&callback=initMap">  
+    </script>
+
+<script>
+    //點一下地圖(移除class none)開啟燈箱，再點一下(加入class none)關閉燈箱
+    $(".map_icon, #lightbox").on("click", function(){
+        $("#lightbox").toggleClass("none");
+        $("body").toggleClass("disabled");
+    });
+    $("#mapMobile").on("click", function(e){
+        e.stopPropagation(e);
+    })
+</script>
 
 <script src="./plugin/aos-master/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
 
-<script src="./js/jquery-3.6.1.min.js"></script>
-<script>
-    //點一下地圖(移除class none)開啟燈箱，再點一下(加入class none)關閉燈箱
-    $(".map_icon, #lightbox").on("click", function(){
-        $("#lightbox").toggleClass("none");
-    });
-
-</script>
-    
 </body>
 </html>
