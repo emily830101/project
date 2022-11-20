@@ -94,13 +94,6 @@ body{
     background-position: center center;
 }
 
-.banner p{
-    color: white;
-    font-size: 28px;
-    line-height: 1.8;
-    margin-left: 40px;
-}
-
 .date{
     text-align: center;
     margin-top: 30px;
@@ -124,7 +117,6 @@ body{
     border: 1px solid #bdbcba;
     border-radius: 10px;
     margin-bottom: 30px;
-    box-shadow: 6px 6px rgba(139, 138, 138, .1);
 }
 
 .info img{
@@ -157,16 +149,21 @@ body{
     padding-right: 10px;
 }
 
+.content h3{
+    color: #797672;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
 .content h1{
     color: #025255;
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
     font-weight: 600;
 }
 
 .contact{
-    border: 1px solid #bdbcba;
-    box-shadow: 6px 6px rgba(139, 138, 138, .1);
+    outline: 1px solid #bdbcba;
     width: 900px;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -179,6 +176,7 @@ body{
     color:#025255;
     line-height: 1.6;
     font-weight: 600;
+    padding-top: 15px;
 }
 
 .contact input{
@@ -192,19 +190,17 @@ body{
 }
 
 .need{
-    width: 838px;
-    border: 1px solid #bdbcba;
-    box-shadow: 6px 6px rgba(139, 138, 138, .1);
-    border-radius: 10px;
+    display: block;
     color:#025255;
-    padding: 30px;
+    padding: 0px 60px;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 #need{
-    margin-top: 30px;
-    width: 838px;
+    margin: 20px 15px;
+    width: 95%;
 }
 
 .next{
@@ -330,6 +326,51 @@ body{
         border-bottom: 1px solid #fff;
     }
 
+    .date{
+
+    }
+
+    .confirm{
+        width: auto;
+    }
+
+    .confirm li{
+        flex-direction: column;
+        border: none;
+    }
+
+    .info p{
+        display: none;
+    }
+
+    .info img{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .contact{
+        width: 100%;
+        outline: none;
+        border-radius: 0%;
+    }
+
+    .need_content{
+        margin: 0 auto;
+    }
+
+    .need_label{
+        display: block;
+        margin-bottom: 20px;
+        line-height: 1.4;
+        text-align: center;
+    }
+    
+    #need{
+        margin: 0;
+        width: 100%;
+    }
+    
     .footer{
         height: auto;
         font-size: 12px;

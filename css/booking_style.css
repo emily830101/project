@@ -356,13 +356,15 @@ body{
 
     .choose{
         width: auto;
-        height: 180px;
+        height: 140px;
         border-radius: 0%;
     }
 
     .content{
         width: 100%;
         display: block;
+        text-align: center;
+        padding-top: 15px;
     }
 
     .date{
@@ -370,20 +372,15 @@ body{
     }
 
     #from, #to{
-        width: 150px;
-    }
-    .date_pick{
-        margin-left: 10px;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        width: 120px;
     }
 
-    .choose_date{
-        margin-left: 10px;   
+    .date_pick{
+        margin: 20px 0px;
     }
     
     .number{
-        margin-left: 10px;
+        margin-left: 0;
     }
 
     .result{
