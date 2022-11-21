@@ -124,3 +124,18 @@ transform: translateY(0);
       border-bottom: 1px solid #fff;
   }
 }
+/*停在哪頁的底色變色*/
+.nav_links .item a{
+  text-decoration: none;
+  /* font-size: 20px; */
+  color:#025255;
+  }
+
+  .nav_links .item a:hover{
+  color:#F9C50F;
+  }
+
+  .nav_links .item:nth-child(4) a{
+  background-color: #025255;
+  color: #fff;
+  }

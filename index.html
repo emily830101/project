@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Geht's</title>
-    <!-- <link rel="stylesheet" href="./css/index_rwd.css"> -->
     <link rel="stylesheet" href="./css/index_style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
@@ -19,15 +18,14 @@
         <a href="index.html">
               <img src="./image/logo.svg" alt="">
           </a>
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars" id="hamburger"></i>
           <div class="booking"><a href="booking.html">立即訂房</a></div>
           
-          <ul class="nav_links_rwd">
+          <ul class="nav_links_rwd unShow">
               <li class="item"><a href="room.html">客房資訊</a></li>
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
               <li class="item"><a href="play.html">必玩體驗</a></li>
-              <li class="item"><a href="map.html">Los Geht's分館</a></li>
-              
+              <li class="item"><a href="map.html">Los Geht's分館</a></li>  
           </ul>
         </div>
       </nav>
@@ -51,7 +49,9 @@
 
     <!-- 大banner -->
     <div class="banner">
-        <p>Los Geht's是德文出發的意思<br>我們提供舒服放鬆的住宿環境<br>讓您一夜好眠後帶著滿滿活力<br>朝世界各個美好的角落出發!</p>
+        <p  data-aos="fade-zoom-in"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in">Los Geht's是德文出發的意思<br>我們提供舒服放鬆的住宿環境<br>讓您一夜好眠後帶著滿滿活力<br>朝世界各個美好的角落出發!</p>
     </div>
 
     <div class="index_container">
@@ -133,15 +133,33 @@
     <script>
         AOS.init();
 
-        $(function(){
-            $(".fa-bars").on("click", function(){
-                $(".nav_links_rwd").toggleClass("show");
-                $(".fa-bars").removeClass("fa-bars").addClass("fa-x");
-                $(".fa-x").on("click", function(){
-                $(".fa-x").removeClass("fa-x").addClass("fa-bars");
-            });
-        });
+        // $(function(){
+        //     $(".fa-bars").on("click", function(){
+        //         console.log(111);
+        //         $(".nav_links_rwd").toggleClass("show");
+        //         console.log(222);
+        //         $(".fa-bars").removeClass("fa-bars").addClass("fa-x");
+        //         console.log(333);
+        //         $(".fa-x").on("click", function(){
+        //             console.log(444);
+        //             $(".fa-x").removeClass("fa-x").addClass("fa-solid fa-bars");
+        //             console.log(555);
+        //         });
+        //     });
+        // });
+
+    $(function(){
+        $("#hamburger").on("click", function(){
+            $(".nav_links_rwd").toggleClass("show");
+            $(".nav_links_rwd").toggleClass("unShow");
+            if ($("#hamburger").hasClass("fa-x")){ // X
+                $("#hamburger").removeClass("fa-x").addClass("fa-bars");
+            } else { // hamburger
+                $("#hamburger").removeClass("fa-bars").addClass("fa-x");
+            }
+        })
     });
+
     </script>
 </body>
 </html>

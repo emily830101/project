@@ -12,7 +12,23 @@
     
 </head>
 <body>
-     
+     <!--nav bar for RWD-->
+     <nav class="navbar_rwd">
+        <div class="navbar_content_rwd">
+        <a href="index.html">
+              <img src="./image/logo.svg" alt="">
+          </a>
+          <i class="fa-solid fa-bars" id="hamburger"></i>
+          <div class="booking"><a href="booking.html">立即訂房</a></div>
+          
+          <ul class="nav_links_rwd unShow">
+              <li class="item"><a href="room.html">客房資訊</a></li>
+              <li class="item"><a href="restaurant.html">珍饌好食</a></li>
+              <li class="item"><a href="play.html">必玩體驗</a></li>
+              <li class="item"><a href="map.html">Los Geht's分館</a></li>  
+          </ul>
+        </div>
+      </nav>
     
      <!--nav bar -->
      <nav class="navbar">
@@ -26,7 +42,7 @@
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
               <li class="item"><a href="play.html">必玩體驗</a></li>
               <li class="item"><a href="map.html">Los Geht's分館</a></li>
-              <li class="booking"><a href="booking.html">立即訂房</a></li>
+              <li class="booking_pc"><a href="booking.html">立即訂房</a></li>
           </ul>
         </div>
       </nav>
@@ -195,6 +211,19 @@
                     </li>`
             );
         };
+
+
+        $(function(){
+        $("#hamburger").on("click", function(){
+            $(".nav_links_rwd").toggleClass("show");
+            $(".nav_links_rwd").toggleClass("unShow");
+            if ($("#hamburger").hasClass("fa-x")){ // X
+                $("#hamburger").removeClass("fa-x").addClass("fa-bars");
+            } else { // hamburger
+                $("#hamburger").removeClass("fa-bars").addClass("fa-x");
+            }
+        })
+    });
 
     </script>
 

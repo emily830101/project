@@ -1,5 +1,4 @@
 @import url("./reset.css");
-
     body{
         font-family:"Helvetica", "Arial","LiHei Pro","微軟正黑體", sans-serif;
         /* word-spacing: 5px; */
@@ -51,7 +50,7 @@
         font-size: 18px;
     }
 
-    .booking a{
+    .booking_pc a, .booking a{
       appearance: none;
       background-color: #F9C50F;
       border: 2px solid transparent;
@@ -303,7 +302,7 @@
     }
     .navbar_content_rwd .booking{
         width: 130px;
-        margin-right: 20px;
+        margin-right: 40px;
         float: right;
         border: navajowhite;
     }
@@ -330,8 +329,8 @@
         display: block;
         float: right;
         margin-top: 20px;
-        margin-right: 10px;
-        font-size: 23px;
+        margin-right: 20px;
+        font-size: 20px;
         color: #025255;
     }
 
@@ -339,7 +338,7 @@
         display: block;
         float: right;
         margin-top: 20px;
-        margin-right: 10px;
+        margin-right: 20px;
         font-size: 23px;
         color: #025255;
     }
@@ -351,14 +350,17 @@
         top: 60px;
         width: 100%;
         overflow: hidden;
-        height: 0px;
-        transition: all .3s;
+        z-index: 1;
     }
 
     .show{
         height: 100vh;
-        transition: all .3s;
-        z-index: 1;
+        transition: height 0.3s ease-in ;
+    }
+
+    .unShow{
+        height: 0vh;
+        transition: height 0.3s ease-out ;
     }
   
     .nav_links_rwd li{

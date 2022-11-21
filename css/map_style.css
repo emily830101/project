@@ -1,64 +1,56 @@
 @import url("reset.css");
-
 body{
     font-family:"Helvetica", "Arial","LiHei Pro","微軟正黑體", sans-serif;
     /* word-spacing: 5px; */
     letter-spacing: 2px;
-  }
-  
-  .navbar{
+}
+
+.navbar_rwd{
+    display: none;
+}
+
+.navbar{
     position: relative;
-  }
-  
-  .navbar_content{
+}
+
+.navbar_content{
     width: 1200px;
     height: 80px;
     margin: 0 auto;
-  }
-  
-  .navbar_content img{
+}
+
+.navbar_content img{
     float: left;
     height: 60px;
     margin-top: 10px;
-  }
-  
-  .navbar_content .fa-bars {
+}
+
+.navbar_content .fa-bars {
     display: none;
-  }
-  
-  .navbar_content ul{
+}
+
+.navbar_content .fa-x {
+    display: none;
+}
+
+.navbar_content ul{
     float: right;
-  }
-  
-  .navbar_content li{
+}
+
+.navbar_content li{
     float: left;
     line-height: 80px;
-  }
-  
-  .nav_links a{
+}
+
+.nav_links a{
     display: block;
     text-decoration: none;
     color: #025255;
     padding: 0 20px;
     font-size: 18px;
-  }
+}
 
-    .nav_links .item a{
-    text-decoration: none;
-    /* font-size: 20px; */
-    color:#025255;
-    }
-
-    .nav_links .item a:hover{
-    color:#F9C50F;
-    }
-
-    .nav_links .item:nth-child(4) a{
-    background-color: #025255;
-    color: #fff;
-    }
-
-  .booking a{
+.booking_pc a, .booking a{
   appearance: none;
   background-color: #F9C50F;
   border: 2px solid transparent;
@@ -82,23 +74,39 @@ body{
   touch-action: manipulation;
   width: 100%;
   will-change: transform;
-  }
-  
-  .booking a:disabled {
+}
+
+.booking_pc a:disabled {
   pointer-events: none;
-  }
-  
-  .booking a:hover {
+}
+
+.booking_pc a:hover {
   color: #fff;
   background-color: #025255;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-5px);
-  }
-  
-  .booking a:active {
+}
+
+.booking_pc a:active {
   box-shadow: none;
   transform: translateY(0);
-  }
+}
+/*停在哪頁的底色變色*/
+
+.nav_links .item a{
+    text-decoration: none;
+    /* font-size: 20px; */
+    color:#025255;
+    }
+  
+    .nav_links .item a:hover{
+    color:#F9C50F;
+    }
+  
+    .nav_links .item:nth-child(4) a{
+    background-color: #025255;
+    color: #fff;
+    }
 
 .banner{
     background-image: url(../image/Rectangle\ 58_black.png), url(../image/map_banner.png);
@@ -228,50 +236,98 @@ body{
 .bottom_menu a{
     color:white;
     line-height: 1.8;
-} 
+}
+
+/*讓手機板地圖開啟時，背景不要滾動*/
+.disabled{
+    overflow: hidden;
+}
 /*-------------------- 428 ---------------------*/
 @media  screen and (max-width: 428px){
-    
-    .disabled{
-        overflow: hidden;
+    .navbar{
+        display: none;
     }
 
-    .navbar_content{
+    .nav_links .booking_pc{
+        display: none;
+    }
+    .navbar_content_rwd .booking{
+        width: 130px;
+        margin-right: 40px;
+        float: right;
+        border: navajowhite;
+    }
+    .navbar_content_rwd .booking a{
+        border-radius: 0%;
+    }
+
+    .navbar_rwd{
+        display: block;
+    }
+    .navbar_content_rwd{
         width: auto;
         height: 60px;
         position: relative;
     }
 
-    .navbar_content img{
+    .navbar_content_rwd img{
         height: 40px;
         margin-left: 10px;
+        margin-top: 10px;
     }
 
-    .navbar_content .fa-bars{
+    .navbar_content_rwd .fa-bars{
         display: block;
         float: right;
         margin-top: 20px;
-        margin-right: 10px;
+        margin-right: 20px;
+        font-size: 20px;
+        color: #025255;
     }
 
-    .navbar_content ul{
-        display: none;
-        background-color: #797672;
+    .navbar_content_rwd .fa-x{
+        display: block;
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+        font-size: 23px;
+        color: #025255;
+    }
+
+    .nav_links_rwd{
+        background-color: rgb(197, 196, 196);
         position: absolute;
         right: 0;
         top: 60px;
         width: 100%;
+        overflow: hidden;
+        z-index: 1;
     }
 
-    .navbar_content .fa-bars:hover ~ ul{
-        display: block;
+    .show{
+        height: 100vh;
+        transition: height 0.3s ease-in ;
     }
 
-    .navbar_content li{
+    .unShow{
+        height: 0vh;
+        transition: height 0.3s ease-out ;
+    }
+  
+    .nav_links_rwd li{
         float: none;
         clear: both;
-        line-height: 40px;
-        border-bottom: 1px solid #fff;
+        line-height: 60px;
+        border-bottom: 1px solid rgb(235, 233, 233);
+        text-align: center;
+    }
+
+    .nav_links_rwd a{
+        display: block;
+        text-decoration: none;
+        color: #025255;
+        padding: 0 20px;
+        font-size: 18px;
     }
 
     .banner{
