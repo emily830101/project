@@ -311,17 +311,34 @@
         right: 0;
         top: 60px;
         width: 100%;
+        overflow: hidden;
+        height: 0px;
+        transition: all .3s;
     }
 
-    .navbar_content .fa-solid:hover ~ ul{
+    .fa-solid{
         display: block;
+    }
+
+    .navbar_content ul .show{
+        height: 400px;
+        transition: all .3s;
     }
 
     .navbar_content li{
         float: none;
         clear: both;
-        line-height: 40px;
+        line-height: 60px;
         border-bottom: 1px solid #fff;
+        text-align: center;
+    }
+
+    .nav_links a{
+        display: block;
+        text-decoration: none;
+        color: #025255;
+        padding: 0 20px;
+        font-size: 18px;
     }
 
     .banner{

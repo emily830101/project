@@ -112,9 +112,16 @@
         </div>
     </footer>
 
+<script src="./js/jquery-3.6.1.min.js"></script>
 <script src="./plugin/aos-master/dist/aos.js"></script>
     <script>
         AOS.init();
+
+        $(function(){
+            $(".fa-solid").on("click", function(){
+                $(".navbar_content ul").toggleClass("show");
+            });
+        });
     </script>
 </body>
 </html>
