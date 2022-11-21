@@ -26,7 +26,11 @@
         margin-top: 10px;
     }
 
-    .navbar_content .fa-solid {
+    .navbar_content .fa-bars {
+        display: none;
+    }
+
+    .navbar_content .fa-x {
         display: none;
     }
 
@@ -299,7 +303,7 @@
     }
     .navbar_content_rwd .booking{
         width: 130px;
-        margin-right: 18px;
+        margin-right: 20px;
         float: right;
         border: navajowhite;
     }
@@ -322,11 +326,22 @@
         margin-top: 10px;
     }
 
-    .navbar_content_rwd .fa-solid{
+    .navbar_content_rwd .fa-bars{
         display: block;
         float: right;
         margin-top: 20px;
         margin-right: 10px;
+        font-size: 23px;
+        color: #025255;
+    }
+
+    .navbar_content_rwd .fa-x{
+        display: block;
+        float: right;
+        margin-top: 20px;
+        margin-right: 10px;
+        font-size: 23px;
+        color: #025255;
     }
 
     .nav_links_rwd{
@@ -341,7 +356,7 @@
     }
 
     .show{
-        height: 240px;
+        height: 100vh;
         transition: all .3s;
         z-index: 1;
     }

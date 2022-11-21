@@ -22,7 +22,7 @@ body{
     margin-top: 10px;
   }
   
-  .navbar_content .fa-solid {
+  .navbar_content .fa-bars {
     display: none;
   }
   
@@ -247,7 +247,7 @@ body{
         margin-left: 10px;
     }
 
-    .navbar_content .fa-solid{
+    .navbar_content .fa-bars{
         display: block;
         float: right;
         margin-top: 20px;
@@ -263,7 +263,7 @@ body{
         width: 100%;
     }
 
-    .navbar_content .fa-solid:hover ~ ul{
+    .navbar_content .fa-bars:hover ~ ul{
         display: block;
     }
 

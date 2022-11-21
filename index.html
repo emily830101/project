@@ -38,7 +38,7 @@
         <a href="index.html">
               <img src="./image/logo.svg" alt="">
           </a>
-          <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i>
           <ul class="nav_links">
               <li class="item"><a href="room.html">客房資訊</a></li>
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
@@ -51,9 +51,7 @@
 
     <!-- 大banner -->
     <div class="banner">
-        <p data-aos="fade-zoom-in"
-        data-aos-duration="1200"
-        data-aos-easing="ease-in">Los Geht's是德文出發的意思<br>我們提供舒服放鬆的住宿環境<br>讓您一夜好眠後帶著滿滿活力<br>朝世界各個美好的角落出發!</p>
+        <p>Los Geht's是德文出發的意思<br>我們提供舒服放鬆的住宿環境<br>讓您一夜好眠後帶著滿滿活力<br>朝世界各個美好的角落出發!</p>
     </div>
 
     <div class="index_container">
@@ -136,10 +134,14 @@
         AOS.init();
 
         $(function(){
-            $(".fa-solid").on("click", function(){
+            $(".fa-bars").on("click", function(){
                 $(".nav_links_rwd").toggleClass("show");
+                $(".fa-bars").removeClass("fa-bars").addClass("fa-x");
+                $(".fa-x").on("click", function(){
+                $(".fa-x").removeClass("fa-x").addClass("fa-bars");
             });
         });
+    });
     </script>
 </body>
 </html>
