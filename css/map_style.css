@@ -237,6 +237,10 @@ body{
     color:white;
     line-height: 1.8;
 }
+/*漢堡選單開啟時，背景不滾動*/
+.fixed{
+    overflow: hidden;
+}
 
 /*讓手機板地圖開啟時，背景不要滾動*/
 .disabled{

@@ -298,6 +298,10 @@ body{
     line-height: 1.8;
 }   
 
+/*漢堡選單開啟時，背景不滾動*/
+.fixed{
+    overflow: hidden;
+}
  /*------------------428--------------------*/
  @media  screen and (max-width: 428px){
     .body{

@@ -163,6 +163,7 @@
         $(function(){
         $("#hamburger").on("click", function(){
             $(".nav_links_rwd").toggleClass("show");
+            $("body").toggleClass("fixed");
             $(".nav_links_rwd").toggleClass("unShow");
             if ($("#hamburger").hasClass("fa-x")){ // X
                 $("#hamburger").removeClass("fa-x").addClass("fa-bars");
