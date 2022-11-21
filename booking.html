@@ -25,7 +25,8 @@
               <li class="item"><a href="room.html">客房資訊</a></li>
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
               <li class="item"><a href="play.html">必玩體驗</a></li>
-              <li class="item"><a href="map.html">Los Geht's分館</a></li>  
+              <li class="item"><a href="map.html">Los Geht's分館</a></li>
+              <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">  
           </ul>
         </div>
       </nav>
@@ -49,7 +50,9 @@
 
     <!-- 大banner -->
     <div class="banner">
-        <p>從Los Geht's向世界的角落出發!</p>
+        <p data-aos="fade-zoom-in"
+        data-aos-duration="1100"
+        data-aos-easing="ease-in">從Los Geht's向世界的角落出發!</p>
     </div>
     <form action="confirm.html"> 
         <div class="choose">
@@ -112,8 +115,11 @@
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./plugin/jquery-ui-1.13.2/jquery-ui.js"></script>
     <script src="./js/database.js"></script>
+    <script src="./plugin/aos-master/dist/aos.js"></script>
 
     <script>
+
+        AOS.init();
         // 日曆
         $( function() {
           // default date
