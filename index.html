@@ -13,8 +13,26 @@
 </head>
 
 <body>
+     <!--nav bar for RWD-->
+     <nav class="navbar_rwd">
+        <div class="navbar_content_rwd">
+        <a href="index.html">
+              <img src="./image/logo.svg" alt="">
+          </a>
+          <i class="fa-solid fa-bars"></i>
+          <div class="booking"><a href="booking.html">立即訂房</a></div>
+          
+          <ul class="nav_links_rwd">
+              <li class="item"><a href="room.html">客房資訊</a></li>
+              <li class="item"><a href="restaurant.html">珍饌好食</a></li>
+              <li class="item"><a href="play.html">必玩體驗</a></li>
+              <li class="item"><a href="map.html">Los Geht's分館</a></li>
+              
+          </ul>
+        </div>
+      </nav>
 
-     <!--nav bar -->
+     <!--nav bar for PC-->
      <nav class="navbar">
         <div class="navbar_content">
         <a href="index.html">
@@ -119,7 +137,7 @@
 
         $(function(){
             $(".fa-solid").on("click", function(){
-                $(".nav_links").toggleClass("show");
+                $(".nav_links_rwd").toggleClass("show");
             });
         });
     </script>
