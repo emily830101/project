@@ -73,18 +73,18 @@
       will-change: transform;
     }
     
-    .booking a:disabled {
+    .booking_pc a:disabled {
       pointer-events: none;
     }
     
-    .booking a:hover {
+    .booking_pc a:hover {
       color: #fff;
       background-color: #025255;
       box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
       transform: translateY(-5px);
     }
     
-    .booking a:active {
+    .booking_pc a:active {
       box-shadow: none;
       transform: translateY(0);
     }
@@ -294,7 +294,7 @@
         display: none;
     }
 
-    .nav_links .booking{
+    .nav_links .booking_pc{
         display: none;
     }
     .navbar_content_rwd .booking{
@@ -406,7 +406,7 @@
     .playintro img, .eatintro img{
         display: block;
         width: 100%;
-        height: 75%;
+        height: 70%;
     }
 
     .letseat{
