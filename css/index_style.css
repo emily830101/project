@@ -304,9 +304,8 @@
         margin-right: 10px;
     }
 
-    .navbar_content ul{
-        display: none;
-        background-color: #797672;
+    .nav_links{
+        background-color: rgb(197, 196, 196);
         position: absolute;
         right: 0;
         top: 60px;
@@ -316,20 +315,21 @@
         transition: all .3s;
     }
 
-    .fa-solid{
-        display: block;
-    }
-
-    .navbar_content ul .show{
-        height: 400px;
+    .show{
+        height: 240px;
         transition: all .3s;
+        z-index: 1;
+    }
+    
+    .nav_links .booking{
+        display: none;
     }
 
-    .navbar_content li{
+    .nav_links li{
         float: none;
         clear: both;
         line-height: 60px;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid rgb(235, 233, 233);
         text-align: center;
     }
 
