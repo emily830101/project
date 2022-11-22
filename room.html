@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/room_style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/backtotop_style.css">
-    <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 </head>
 <body>
     <a id="backToTop"></a>
@@ -18,7 +18,7 @@
         <a href="index.html">
               <img src="./image/logo.svg" alt="">
           </a>
-          <i class="fa-solid fa-bars" id="hamburger"></i>
+          <i class="fa fa-bars" id="hamburger"></i>
           <div class="booking"><a href="booking.html">立即訂房</a></div>
           
           <ul class="nav_links_rwd unShow">
@@ -36,7 +36,6 @@
           <a href="index.html">
               <img src="./image/logo.svg" alt="">
           </a>
-          <i class="fa-solid fa-bars"></i>
           <ul class="nav_links">
               <li class="item"><a href="room.html">客房資訊</a></li>
               <li class="item"><a href="restaurant.html">珍饌好食</a></li>
@@ -126,10 +125,10 @@
             $(".nav_links_rwd").toggleClass("show");
             $("body").toggleClass("fixed");
             $(".nav_links_rwd").toggleClass("unShow");
-            if ($("#hamburger").hasClass("fa-x")){ // X
-                $("#hamburger").removeClass("fa-x").addClass("fa-bars");
+            if ($("#hamburger").hasClass("fa-times")){ // X
+                $("#hamburger").removeClass("fa-times").addClass("fa-bars");
             } else { // hamburger
-                $("#hamburger").removeClass("fa-bars").addClass("fa-x");
+                $("#hamburger").removeClass("fa-bars").addClass("fa-times");
             }
         })
     });

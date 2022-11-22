@@ -29,7 +29,7 @@ body{
     display: none;
 }
 
-.navbar_content .fa-x {
+.navbar_content .fa-times {
     display: none;
 }
 
@@ -315,12 +315,12 @@ body{
         color: #025255;
     }
 
-    .navbar_content_rwd .fa-x{
+    .navbar_content_rwd .fa-times{
         display: block;
         float: right;
         margin-top: 20px;
         margin-right: 20px;
-        font-size: 23px;
+        font-size: 22px;
         color: #025255;
     }
 

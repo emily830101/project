@@ -33,7 +33,7 @@ body{
     display: none;
 }
 
-.navbar_content .fa-x {
+.navbar_content .fa-times {
     display: none;
 }
 
@@ -253,11 +253,15 @@ body{
 }
 /*漢堡選單開啟時，背景不滾動*/
 .fixed{
+    /* height: 100%; */
     overflow: hidden;
 }
 
 /*讓手機板地圖開啟時，背景不要滾動*/
 .disabled{
+    width: 100%;
+    height: 100%;
+    margin: 0;
     overflow: hidden;
 }
 /*-------------------- 428 ---------------------*/
@@ -303,12 +307,12 @@ body{
         color: #025255;
     }
 
-    .navbar_content_rwd .fa-x{
+    .navbar_content_rwd .fa-times{
         display: block;
         float: right;
         margin-top: 20px;
         margin-right: 20px;
-        font-size: 23px;
+        font-size: 22px;
         color: #025255;
     }
 
