@@ -7,7 +7,7 @@
     <title>Los Geht's</title>
     <link rel="stylesheet" href="./css/map_style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-    <script src="./plugin/fontawesome/a742b2025f.js"></script>
+    <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
     <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/backtotop_style.css">
 </head>
@@ -126,7 +126,6 @@
 
 
     <script type="text/javascript">
-        //initial the map
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: 25.04, lng: 121.512},
@@ -145,7 +144,7 @@
             var marker1 = new google.maps.Marker({
                 position: {lat: 25.0417156, lng: 121.5256624}, // 定位
                 map: map,
-                title:'濟南館'
+                // title:'濟南館'
             }); 
             marker1.setMap(map);
             // 註冊mouse enter, mouse leave事件

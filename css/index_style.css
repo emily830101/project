@@ -316,7 +316,7 @@
     }
     .navbar_content_rwd .booking{
         width: 130px;
-        margin-right: 20px;
+        margin-right: 40px;
         float: right;
         border: navajowhite;
     }
@@ -471,8 +471,6 @@
 
     .eatp p{
         width: auto;
-        padding: 20px;
-        font-size: 18px;;
     }
 
     .footer{
