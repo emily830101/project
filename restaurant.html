@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="./css/restaurant_style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/backtotop_style.css">
 </head>
 <body>
+    <a id="backToTop"></a>
      <!--nav bar for RWD-->
      <nav class="navbar_rwd">
         <div class="navbar_content_rwd">
@@ -159,6 +161,22 @@
             }
         })
     });
+
+    var backtotopbtn = $('#backToTop');
+        
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                backtotopbtn.addClass('show');
+            } else {
+                backtotopbtn.removeClass('show');
+            }
+        });
+
+        backtotopbtn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+
 
 </script>
 </body>

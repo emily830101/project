@@ -11,9 +11,13 @@
     <!-- <script src="./plugin/fontawesome/a742b2025f.js"></script> -->
     <!-- <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script> -->
     <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/backtotop_style.css">
 </head>
 
 <body>
+     <!--Back to top button-->
+    <a id="backToTop"></a>
+
      <!--nav bar for RWD-->
      <nav class="navbar_rwd">
         <div class="navbar_content_rwd">
@@ -155,33 +159,18 @@
     <script>
         AOS.init();
 
-        // $(function(){
-        //     $(".fa-bars").on("click", function(){
-        //         console.log(111);
-        //         $(".nav_links_rwd").toggleClass("show");
-        //         console.log(222);
-        //         $(".fa-bars").removeClass("fa-bars").addClass("fa-x");
-        //         console.log(333);
-        //         $(".fa-x").on("click", function(){
-        //             console.log(444);
-        //             $(".fa-x").removeClass("fa-x").addClass("fa-solid fa-bars");
-        //             console.log(555);
-        //         });
-        //     });
-        // });
-
-    $(function(){
-        $("#hamburger").on("click", function(){
-            $(".nav_links_rwd").toggleClass("show");
-            $("body").toggleClass("fixed");
-            $(".nav_links_rwd").toggleClass("unShow");
-            if ($("#hamburger").hasClass("fa-x")){ // X
-                $("#hamburger").removeClass("fa-x").addClass("fa-bars");
-            } else { // hamburger
-                $("#hamburger").removeClass("fa-bars").addClass("fa-x");
-            }
-        })
-    });
+        $(function(){
+            $("#hamburger").on("click", function(){
+                $(".nav_links_rwd").toggleClass("show");
+                $("body").toggleClass("fixed");
+                $(".nav_links_rwd").toggleClass("unShow");
+                if ($("#hamburger").hasClass("fa-x")){ // X
+                    $("#hamburger").removeClass("fa-x").addClass("fa-bars");
+                } else { // hamburger
+                    $("#hamburger").removeClass("fa-bars").addClass("fa-x");
+                }
+            })
+        });
 
         var backtotopbtn = $('#backToTop');
         

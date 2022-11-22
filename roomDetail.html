@@ -9,10 +9,11 @@
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./plugin/splide4.1.3/css/splide.min.css">
     <link rel="stylesheet" href="./css/backtotop_style.css">
-    <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
+    <script src="./plugin/fontawesome/a742b2025f.js"></script>
 </head>
 
 <body>
+    <a id="backToTop"></a>
     <!--nav bar for RWD-->
     <nav class="navbar_rwd">
         <div class="navbar_content_rwd">
@@ -171,6 +172,23 @@
             }
         })
     });
+
+     //back to top button
+     var backtotopbtn = $('#backToTop');
+        
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                backtotopbtn.addClass('show');
+            } else {
+                backtotopbtn.removeClass('show');
+            }
+        });
+
+        backtotopbtn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+
 
   </script>
 
