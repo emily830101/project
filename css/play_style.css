@@ -576,16 +576,6 @@ body{
         display: none;
     }
 
-   
-
-
-
-    
-
-
-
-
-
     .footer{
         height: auto;
         font-size: 12px;
@@ -604,7 +594,7 @@ body{
     }
 
     .footer_info{
-        padding-top: 30px;
+        padding-top: 10px;
         font-size: 12px;
     }
 

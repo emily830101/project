@@ -459,36 +459,36 @@ body{
     }
 
     .footer{
-    height: auto;
-    font-size: 12px;
+        height: auto;
+        font-size: 12px;
     }
 
     .footer_container{
-    border: 1px solid #999;
-    width: auto;
+        border: 1px solid #999;
+        width: auto;
     }
 
     .footer_text{
-    line-height: 1.6;
-    /* border: 1px solid #999; */
-    width: auto;
-    margin: 0 auto;
+        line-height: 1.6;
+        /* border: 1px solid #999; */
+        width: auto;
+        margin: 0 auto;
     }
 
     .footer_info{
-    padding-top: 30px;
-    font-size: 12px;
+        padding-top: 10px;
+        font-size: 12px;
     }
 
     .footer_announce{
-    padding-top: 30px;
+        padding-top: 30px;
     }   
 
     .footer_menu{
-    display: none;
+        display: none;
     }
 
     .bottom_menu{
-    display: none;
+        display: none;
     }
   }
