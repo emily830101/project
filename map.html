@@ -9,8 +9,10 @@
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
     <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/backtotop_style.css">
 </head>
 <body>
+    <a id="backToTop"></a>
        <!--nav bar for RWD-->
      <nav class="navbar_rwd">
         <div class="navbar_content_rwd">
@@ -118,7 +120,11 @@
         </div>
     </footer>
 
+<script src="./plugin/aos-master/dist/aos.js"></script>
 <script src="./js/jquery-3.6.1.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_pWa8kGfXLWju54TBEsqs7hGFSMV9DAA&callback=initMap"></script>  
+
+
     <script type="text/javascript">
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -210,14 +216,6 @@
             }
         }
 
-     
-
-    </script>
-        <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_pWa8kGfXLWju54TBEsqs7hGFSMV9DAA&callback=initMap">  
-    </script>
-
-<script>
     //點一下地圖(移除class none)開啟燈箱，再點一下(加入class none)關閉燈箱
     $(".map_icon, #lightbox").on("click", function(){
         $("#lightbox").toggleClass("none");
@@ -226,14 +224,13 @@
     $("#mapMobile").on("click", function(e){
         e.stopPropagation(e);
     })
+
 </script>
 
-<script src="./plugin/aos-master/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<script>
+    AOS.init();
+    
 
-    <script>
     $(function(){
         $("#hamburger").on("click", function(){
             $(".nav_links_rwd").toggleClass("show");
@@ -246,7 +243,23 @@
             }
         })
     });
-    </script>
+
+    var backtotopbtn = $('#backToTop');
+        
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                backtotopbtn.addClass('show');
+            } else {
+                backtotopbtn.removeClass('show');
+            }
+        });
+
+        backtotopbtn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+
+</script>
 
 </body>
 </html>
