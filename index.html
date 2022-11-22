@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Geht's</title>
+    <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/index_style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script>
+    <!-- <script src="./plugin/fontawesome/a742b2025f.js"></script> -->
+    <!-- <script src="https://kit.fontawesome.com/a742b2025f.js" crossorigin="anonymous"></script> -->
     <link href="./plugin/aos-master/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/backtotop_style.css">
 </head>
@@ -67,23 +69,37 @@
         <ul class="playintro">
             <li>
                 <a href="play.html"><img src="./image/index_hiking.png" >
-                <h2>北德拉曼健行</h2>
-                <p>專業嚮導帶您體驗高山壯闊之美<br>熱愛山林與健行的您千萬別錯過</p>
+                <h2 data-aos="fade-zoom-in"
+                data-aos-duration="400"
+                data-aos-easing="ease-in">北德拉曼健行</h2>
+                <p data-aos="fade-zoom-in"
+                data-aos-duration="400"
+                data-aos-easing="ease-in">專業嚮導帶您體驗高山壯闊之美<br>熱愛山林與健行的您千萬別錯過</p>
                 </a>
             </li>
             <li>
                 <a href="play.html"><img src="./image/index_diving.png" >
-                <h2>牛奶海浮潛</h2>
-                <p>深入海底世界與海龜一同徜徉大海<br>快跟著潛水教練一窺海底的秘密</p>
+                <h2 data-aos="fade-zoom-in"
+                data-aos-duration="400"
+                data-aos-easing="ease-in">牛奶海浮潛</h2>
+                <p data-aos="fade-zoom-in"
+                data-aos-duration="400"
+                data-aos-easing="ease-in">深入海底世界與海龜一同徜徉大海<br>快跟著潛水教練一窺海底的秘密</p>
                 </a> 
             </li>
             <li>
                 <a href="play.html"><img src="./image/index_sup.png">
-                <h2>新山SUP立槳</h2>
-                <p>一塊板一根槳風靡世界的SUP<br>帶您欣賞日出與無垠海洋</p>
+                <h2 data-aos="fade-zoom-in"
+                data-aos-duration="600"
+                data-aos-easing="ease-in">新山SUP立槳</h2>
+                <p data-aos="fade-zoom-in"
+                data-aos-duration="600"
+                data-aos-easing="ease-in">一塊板一根槳風靡世界的SUP<br>帶您欣賞日出與無垠海洋</p>
                 </a>
             </li>
         </ul>
+
+        <hr size="2px" color="#025255" width="80%">
 
         <!--餐廳介紹-->
         <div class="letseat">
@@ -92,13 +108,19 @@
 
         <ul class="eatintro">
             <li>
-                <a href="restaurant.html"><img src="./image/index_ramen.png" alt=""></a> 
+                <a href="restaurant.html"><img src="./image/index_ramen.png" data-aos="fade-zoom-in"
+                    data-aos-duration="600"
+                    data-aos-easing="ease-in" alt=""></a> 
             </li>
             <li>
-                <a href="restaurant.html"><img src="./image/index_avocado.png" alt=""></a>
+                <a href="restaurant.html"><img src="./image/index_avocado.png" data-aos="fade-zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-easing="ease-in" alt=""></a>
             </li>
             <li>
-                <a href="restaurant.html"><img src="./image/index_cook.png" alt=""></a> 
+                <a href="restaurant.html"><img src="./image/index_cook.png" data-aos="fade-zoom-in"
+                    data-aos-duration="1600"
+                    data-aos-easing="ease-in" alt=""></a> 
             </li>
         </ul>
 
@@ -148,6 +170,21 @@
                     $("#hamburger").removeClass("fa-bars").addClass("fa-x");
                 }
             })
+        });
+
+        var backtotopbtn = $('#backToTop');
+        
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                backtotopbtn.addClass('show');
+            } else {
+                backtotopbtn.removeClass('show');
+            }
+        });
+
+        backtotopbtn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
         });
 
     </script>

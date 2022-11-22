@@ -6,7 +6,7 @@ var rooms =
     price: "TWD 11,400",
     img: "./image/roomA1.png",
     capacity: 2,
-    unavailableDates: ["2022-11-15"]
+    unavailableDates: ["2022-11-25"]
 },
 {   id: "roomB",
     name: "豪華海景雙人房",
