@@ -5,10 +5,6 @@ body{
     letter-spacing: 2px;
 }
 
-.mapMobile{
-    display: none;
-}
-
 .navbar_rwd{
     display: none;
 }
@@ -249,7 +245,7 @@ body{
 
 .bottom_menu a{
     color:white;
-    line-height: 1.7;
+    line-height: 1.5;
 }
 /*漢堡選單開啟時，背景不滾動*/
 .fixed{
@@ -444,7 +440,6 @@ body{
     }
 
     #mapMobile{
-        display: block;
         background-color: white;
         border-radius: 10px;
         margin: 40px 40px;
